@@ -23,7 +23,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     }
 
     @IBAction func Frontal(_ sender: Any) {
-        nuevaConexion.setURL(nueva: "https://wp8mrbv9qd.execute-api.us-east-1.amazonaws.com/prod/frontal/")
+        nuevaConexion.setURL(nueva: "https://d2qx3bvr4h3ci.cloudfront.net/frontal/")
         nuevaConexion.tipoOtro()
         print(nuevaConexion.getURL())
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary){
@@ -37,7 +37,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         }
     }
     @IBAction func Reverso(_ sender: Any) {
-        nuevaConexion.setURL(nueva: "https://wp8mrbv9qd.execute-api.us-east-1.amazonaws.com/prod/reverso/")
+        nuevaConexion.setURL(nueva: "https://d2qx3bvr4h3ci.cloudfront.net/reverso/")
         nuevaConexion.tipoOtro()
         print(nuevaConexion.getURL())
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary){
@@ -52,7 +52,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     }
     
     @IBAction func Selfie(_ sender: Any) {
-        nuevaConexion.setURL(nueva: "https://wp8mrbv9qd.execute-api.us-east-1.amazonaws.com/prod/ine-selfie/")
+        nuevaConexion.setURL(nueva: "https://d2qx3bvr4h3ci.cloudfront.net/ine-selfie/")
         nuevaConexion.tipoSelfie()
         nuevaConexion.setFaceId(nuevoFaceid: "123121312414")
         print(nuevaConexion.getURL())
@@ -68,7 +68,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     }
     
     @IBAction func Comprobante(_ sender: Any) {
-        nuevaConexion.setURL(nueva: "https://wp8mrbv9qd.execute-api.us-east-1.amazonaws.com/prod/cfe/")
+        nuevaConexion.setURL(nueva: "https://d2qx3bvr4h3ci.cloudfront.net/cfe/")
         nuevaConexion.tipoOtro()
         print(nuevaConexion.getURL())
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary){
