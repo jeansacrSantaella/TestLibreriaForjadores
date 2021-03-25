@@ -108,7 +108,27 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         titulo.text=nuevo
     }
     func ConvertImageToBase64String (img: UIImage) -> String {
-        let imageData:NSData = img.jpegData(compressionQuality: 0.50)! as NSData //UIImagePNGRepresentation(img)
+        let targetSize = CGSize(width: 300, height: 200)
+               let widthScaleRatio = targetSize.width / img.size.width
+               let heightScaleRatio = targetSize.height / img.size.height
+               
+               let scaleFactor = min(widthScaleRatio, heightScaleRatio)
+               
+               let scaledImageSize = CGSize(
+                   width: img.size.width * scaleFactor,
+                   height: img.size.height * scaleFactor
+               )
+               let renderer = UIGraphicsImageRenderer(
+                          size: scaledImageSize
+                      )
+
+                      let scaledImage = renderer.image { _ in
+                          img.draw(in: CGRect(
+                              origin: .zero,
+                              size: scaledImageSize
+                          ))
+                      }
+        let imageData:NSData = scaledImage.jpegData(compressionQuality: 0.10)! as NSData //UIImagePNGRepresentation(img)
         let imgString = imageData.base64EncodedString(options: .init(rawValue: 0))
         return imgString
     }
