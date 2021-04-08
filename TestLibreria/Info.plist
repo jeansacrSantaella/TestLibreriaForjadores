@@ -41,6 +41,14 @@
 	</dict>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+    
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Puedes subir imagenes de tu galaeria para reportes</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Se requiere acceso a la camara</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Necesitamos almacenar fotos</string>
+    
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
